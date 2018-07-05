@@ -1,8 +1,8 @@
 <?php
 
-//http://localhost/FBMgr/MyMVC_mini/index.php
+//http://localhost/blog/index.php
 //定义服务器默认URL
-define("SERVER_URL","http://".$_SERVER['SERVER_NAME']."/FBMgr/Day0627 MVC/MyMVC1.0/");
+define("SERVER_URL","http://".$_SERVER['SERVER_NAME']."/blog/");
 
 //定义前台静态资源常量
 define("__HOME__","public/home/");
