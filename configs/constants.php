@@ -13,7 +13,7 @@ define("__HOME_JS__", SERVER_URL.__HOME__."js/");
 
 //定义前台公共代码文件的地址常量
 // application/home/views/commom/
-define("__HOME_COMMON__","application/home/views/commom/");
+define("__HOME_COMMON__","application/home/views/common/");
 
 //定义登陆功能静态常量
 define("__LOGIN__","public/login/");

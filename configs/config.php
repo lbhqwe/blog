@@ -5,7 +5,7 @@ $c=[
         "group"=>"home",
         "controller"=>"index",
         "action"=>"index"
-    ],
+    ]
         //数据库
 //        'db'=>[
 //            'dsn'=>'mysql:dbname=myhospital;host=localhost:3306',
