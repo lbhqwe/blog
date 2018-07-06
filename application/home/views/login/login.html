@@ -83,10 +83,12 @@
 		<div class="container"> 
 			<h3 class="w3ls-title w3ls-title1">Login to your account</h3>  
 			<div class="login-body">
-				<form action="#" method="post">
-					<input type="text" class="user" name="email" placeholder="Enter your email" required="">
-					<input type="password" name="password" class="lock" placeholder="Password" required="">
-					<input type="submit" value="Login">
+				<form action="#" method="post" id="loginform" >
+					<div class="alert alert-success" id="alertmess" role="alert">
+						Your info has been saved.</div>
+					<input type="text" class="user" name="uname" id="uname" placeholder="请输入用户名">
+					<input type="password" name="upwd" id="upwd" class="lock" placeholder="请输入密码">
+					<input type="submit" id="loginbtn" value="Login">
 					<div class="forgot-grid">
 						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Remember me</label>
 						<div class="forgot">
@@ -211,5 +213,52 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo __HOME_JS__;?>bootstrap.js"></script>
+	<script type="text/javascript">
+        function check() {
+            var flag = true;
+            //输入信息提示
+            $("#uname").blur(function () {
+                if ($(this).val() == "") {
+                    $("#alertmess").html("用户名不允许为空！");
+                    flag = false;
+                    return;
+                }
+            }).focus(function () {
+                $("#alertmess").html("Your info has been saved.");
+            });
+            $("#upwd").blur(function () {
+                if ($(this).val() == "") {
+                    $("#alertmess").html("密码不允许为空！");
+                    flag = false;
+                    return;
+                }
+            }).focus(function () {
+                $("#alertmess").html("Your info has been saved.");
+            });
+            return true;
+        }
+        $(function () {
+            if (!check()) {
+                return false;
+            }
+            //点击提交按钮
+            $("#loginbtn").click(function () {
+                $.post(
+                    'index.php?g=home&c=user&a=login',
+                    $("#loginform").serialize(),
+                    function (result) {
+                        if(result.errno==200){
+                            alert(result.mess+"\n点击进入首页");
+                            window.location.href="index.php";
+                        }else{
+                            $("#alertmess").html(result.mess);
+                        }
+                    },
+                    "json"
+                );
+                return false;
+            });
+        });
+        </script>
 </body>
 </html>

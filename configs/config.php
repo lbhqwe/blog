@@ -5,16 +5,16 @@ $c=[
         "group"=>"home",
         "controller"=>"index",
         "action"=>"index"
-    ]
+    ],
         //数据库
-//        'db'=>[
-//            'dsn'=>'mysql:dbname=myhospital;host=localhost:3306',
-//            'username'=>'root',
-//            'password'=>'888',
-//            'option'=>array(
-//                \PDO::ATTR_PERSISTENT=>true,
-//                \PDO::ATTR_ORACLE_NULLS=>true,
-//                \PDO::ERRMODE_EXCEPTION=>true
-//            )]
+        'db'=>[
+            'dsn'=>'mysql:dbname=mymart;host=localhost:3306',
+            'username'=>'root',
+            'password'=>'888',
+            'option'=>array(
+                \PDO::ATTR_PERSISTENT=>true,
+                \PDO::ATTR_ORACLE_NULLS=>true,
+                \PDO::ERRMODE_EXCEPTION=>true
+            )]
 ];
 
