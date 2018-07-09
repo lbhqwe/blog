@@ -83,19 +83,18 @@
 		<div class="container"> 
 			<h3 class="w3ls-title w3ls-title1">Create your account</h3>  
 			<div class="login-body">
-				<form action="#" method="post">
-					<input type="text" class="user" name="name" placeholder="Enter your Name" required="">
-					<input type="text" class="user" name="email" placeholder="Enter your email" required="">
-					<input type="password" name="password" class="lock" placeholder="Password" required="">
-					<input type="submit" value="Sign Up ">
-					<div class="forgot-grid">
-						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Remember me</label>
-						<div class="forgot">
-							<a href="#">Forgot Password?</a>
-						</div>
+				<form action="#" method="post" id="regform">
+					<div class="alert alert-success" id="alertmess" role="alert">
+						Your info has been saved.</div>
+					<input type="text" class="user" name="uname" id="uname" placeholder="请输入账户名" >
+					<input type="password" name="upwd" id="upwd" class="lock" placeholder="请输入密码" >
+					<input type="password" name="reupwd" id="reupwd" class="lock" placeholder="请确认密码" >
+					<input type="text" class="user" name="uphone" id="uphone" placeholder="请输入您的手机号" >
+					<input type="text" class="user" name="uemail" id="uemail" placeholder="请输入您的邮箱" >
+					<input type="submit" id="sub" value="Sign Up ">
 						<div class="clearfix"> </div>
-					</div>
 				</form>
+		</div>
 			</div>  
 			<h6>Already have an account? <a href="login.html">Login Now »</a> </h6>  
 		</div>
@@ -201,5 +200,115 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo __HOME_JS__;?>bootstrap.js"></script>
+	<script type="text/javascript">
+        function check() {
+            var flag = true;
+            //输入信息提示
+            $("#uname").blur(function () {
+                if ($(this).val() == "") {
+                    $("#alertmess").html("用户名不允许为空！");
+                    flag = false;
+                    return;
+                }
+                $.post(
+                    'index.php?g=home&c=user&a=checkuser',
+                    {"uname":$(this).val()},
+                    function (result) {
+                        if(result==1){
+                            $("#alertmess").html("用户名已经被占用！");
+                            flag = false;
+                            return;
+                        }else {
+                            $("#alertmess").html("用户名可用！");
+                        }
+                    }
+                )
+            }).focus(function () {
+                $("#alertmess").html("Your info has been saved.");
+            });
+            $("#uphone").blur(function () {
+                var reg=/^1(3[0-9]|5[189]|8[6789])[0-9]{8}$/;
+                if ($(this).val() == "") {
+                    $("#alertmess").html("手机号不允许为空！");
+                    flag = false;
+                    return;
+                }
+                if(!reg.test($(this).val())){
+                    $("#alertmess").html("手机号格式不正确！");
+                    flag = false;
+                    return;
+                }
+            }).focus(function () {
+                $("#alertmess").html("Your info has been saved.");
+            });
+
+            $("#uemail").blur(function () {
+                var reg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                if ($(this).val() == "") {
+                    $("#alertmess").html("邮箱不允许为空！");
+                    flag = false;
+                    return;
+                }
+                if(!reg.test($(this).val())){
+                    $("#alertmess").html("邮箱格式不正确！");
+                    flag = false;
+                    return;
+                }
+            }).focus(function () {
+                $("#alertmess").html("Your info has been saved.");
+            });
+
+            $("#upwd").blur(function () {
+                if ($(this).val() == "") {
+                    $("#alertmess").html("密码不允许为空！");
+                    flag = false;
+                    return;
+                }
+            }).focus(function () {
+                $("#alertmess").html("Your info has been saved.");
+            });
+
+            $("#reupwd").blur(function () {
+                if ($(this).val() == "") {
+                    $("#alertmess").html("确认密码不允许为空！");
+                    flag = false;
+                    return;
+                }
+                if ($(this).val() != $("#upwd").val()) {
+                    $("#alertmess").html("两次密码不一致！");
+                    flag = false;
+                    return;
+                }
+            }).focus(function () {
+                $("#alertmess").html("Your info has been saved.");
+            });
+
+
+
+            return true;
+        }
+
+        $(function () {
+            if (!check()) {
+                return false;
+            }
+            //点击提交按钮
+            $("#sub").click(function () {
+                $.post(
+                    'index.php?g=home&c=user&a=register',
+                    $("#regform").serialize(),
+                    function (result) {
+                        alert(result.mess);
+                        window.location.href="index.php?g=home&c=login&a=login";
+                    },
+                    "json"
+                );
+                return false;
+            });
+        })
+
+
+	</script>
+
 </body>
 </html>

@@ -8,7 +8,7 @@
 
 namespace application\home\controllers;
 use core\mybase\Controller;
-
+use core\MySession;
 class LoginController extends Controller
 {
     public function login(){
@@ -17,5 +17,10 @@ class LoginController extends Controller
     public function signup(){
         $this->display();
     }
+    public function logout(){
+        MySession::destorySession();
+        header("location:index.php?g=admin&c=login&a=index");
+    }
+
 
 }
