@@ -24,8 +24,10 @@ define("__LOGIN_JS__",SERVER_URL.__LOGIN__."js/");
 //定义后台静态资源常量
 define("__ADMIN__","public/admin/");
 define("__ADMIN_CSS__", SERVER_URL.__ADMIN__."css/");
+define("__ADMIN_IMAGES__", SERVER_URL.__ADMIN__."images/");
 define("__ADMIN_JS__", SERVER_URL.__ADMIN__."js/");
+define("__ADMIN_I__", SERVER_URL.__ADMIN__."i/");
 
 //定义前后台共代码文件的地址常量
-// application/admin/views/commom/
-define("__ADMIN_COMMON__","application/admin/views/commom/");
+// application/admin/views/common/
+define("__ADMIN_COMMON__","application/admin/views/common/");

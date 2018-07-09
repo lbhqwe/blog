@@ -5,6 +5,9 @@
       <webServer id="3cb2f590-be34-4075-975d-3e838cae5aff" name="Myserver" url="http://localhost/blog">
         <fileTransfer port="0" mountedRoot="D:\wamp64\www\blog" accessType="MOUNT" />
       </webServer>
+      <webServer id="483dfc75-9751-47da-9195-caf173cfc744" name="myserver" url="http://localhost/blog">
+        <fileTransfer port="0" mountedRoot="D:\wamp64\www\blog" accessType="MOUNT" />
+      </webServer>
     </option>
   </component>
 </project>
