@@ -80,35 +80,14 @@
 	<!-- //header --> 	
 	<!-- contact-page -->
 	<div class="contact">
-		<div class="container"> 
-			<h3 class="w3ls-title w3ls-title1">Contact Us</h3>  
-			<div class="map-info">
-				<div class="col-md-6 map-grids">
-					<h4>Our Smart bazaar Store1</h4>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555"></iframe>
-				</div>
-				<div class="col-md-6 map-grids">
-					<h4>Our Smart bazaar Store2</h4>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23778.253788067046!2d-87.77626504212625!3d41.84376259112007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e33967c81db8f%3A0xbc5872c77c003120!2sCicero%2C+IL!5e0!3m2!1sen!2sin!4v1470650895897"></iframe>
-				</div>   
-				<div class="col-md-6 map-grids">
-					<h4>Our Smart bazaar Store3</h4>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4851.135123262741!2d105.86847248902144!3d58.25136049196456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cf6e6f5eed7e5eb%3A0xfec064728556bbad!2sTokma%2C+Irkutsk+Oblast%2C+Russia%2C+666639!5e0!3m2!1sen!2sin!4v1470650971228"></iframe>
-				</div>   
-				<div class="col-md-6 map-grids">
-					<h4>Our Smart bazaar Store4</h4>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555" allowfullscreen=""></iframe>
-				</div> 
-				<div class="clearfix"> </div>
-			</div>  
 			<div class="contact-form-row">
 				<h3 class="w3ls-title w3ls-title1">Drop Us a line</h3>  
 				<div class="col-md-7 contact-left">
-					<form action="#" method="post">
-						<input type="text" name="Name" placeholder="Name" required="">
-						<input class="email" type="text" name="Email" placeholder="Email" required="">
-						<textarea placeholder="Message" name="Message" required=""></textarea>
-						<input type="submit" value="SUBMIT">
+					<form action="#" name="myform" id="myform">
+						<input type="text" name="uname" id="uname" placeholder="Name" required="">
+						<input class="email" type="text" id="uemail" name="uemail" placeholder="Email" required="">
+						<textarea placeholder="Message" id="umessage" name="umessage" required=""></textarea>
+						<input type="submit" id="sub" value="SUBMIT">
 					</form>
 				</div> 
 				<div class="col-md-4 contact-right">
@@ -222,6 +201,26 @@
 	<!-- cart-js -->
 	<script src="<?php echo __HOME_JS__;?>minicart.js"></script>
 	<script>
+            $(function () {
+                $("#sub").click(function () {
+                    $.post(
+                        'index.php?g=home&c=index&a=guestbook',
+                        $("#myform").serialize(),
+                        function (result) {
+                            if(result.errno==200){
+                                alert(result.mess+"\n点击确定返回网站首页");
+                                window.location.href="index.php";
+                            }else {
+                                window.location.href="index.php?g=home&c=index&a=contact";
+                            }
+                        },
+                        "json"
+                    );
+                    return false;
+                });
+            });
+
+
         w3ls.render();
 
         w3ls.cart.on('w3sb_checkout', function (evt) {
@@ -236,7 +235,8 @@
         		}
         	}
         });
-    </script>  
+    </script>
+
 	<!-- //cart-js -->
 	<!-- menu js aim -->
 	<script src="<?php echo __HOME_JS__;?>jquery.menu-aim.js"> </script>

@@ -1,8 +1,12 @@
 <div class="header">
     <div class="w3ls-header"><!--header-one-->
         <div class="w3ls-header-left">
-                <p><a href="index.php?g=home&c=login&a=login">Login </a>&nbsp;&nbsp;
-                <a href="index.php?g=home&c=login&a=signup">Sign Up</a></p>
+            <p>
+                <!--<a><?php echo $this->data["uname"] ?></a>-->
+                <a href="index.php?g=home&c=login&a=login">Login </a>&nbsp;&nbsp;
+                <a href="index.php?g=home&c=login&a=signup">Sign Up</a>&nbsp;&nbsp;
+                <a href="index.php?g=home&c=login&a=logout">Logout</a>
+            </p>
         </div>
         <div class="w3ls-header-right">
             <ul>
@@ -16,13 +20,13 @@
                     </ul>
                 </li>
                 <li class="dropdown head-dpdn">
-                    <a href="contact.html" class="dropdown-toggle"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
+                    <a href="index.php?g=home&c=index&a=contact" class="dropdown-toggle"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
                 </li>
                 <li class="dropdown head-dpdn">
-                    <a href="card.html" class="dropdown-toggle"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit Card</a>
+                    <a href="card.html" class="dropdown-toggle"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Contact Us</a>
                 </li>
                 <li class="dropdown head-dpdn">
-                    <a href="help.html" class="dropdown-toggle"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
+                    <a href="help.html" class="dropdown-toggle"><i class="fa fa-question-circle" aria-hidden="true"></i> About Us</a>
                 </li>
             </ul>
         </div>
@@ -31,7 +35,7 @@
     <div class="header-two"><!-- header-two -->
         <div class="container">
             <div class="header-logo">
-                <h1><a href="index.html"><span>S</span>mart <i>Bazaar</i></a></h1>
+                <h1><a href="index.php"><span>S</span>mart <i>Bazaar</i></a></h1>
                 <h6>Your stores. Your place.</h6>
             </div>
             <div class="header-search">
@@ -44,13 +48,12 @@
             </div>
             <div class="header-cart">
                 <div class="my-account">
-                    <a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
+                    <a href="index.php?g=home&c=index&a=contact"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
                 </div>
                 <div class="cart">
                     <form action="#" method="post" class="last">
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="display" value="1" />
-                        <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+
+                        <button class="w3view-cart" type="submit" name="submit" value="submit"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
                     </form>
                 </div>
                 <div class="clearfix"> </div>
