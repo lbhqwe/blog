@@ -8,7 +8,7 @@ class SendMailModel
     public function sendmail($args)
     {
         //打开缓冲区
-//        ob_start();
+         ob_start();
 
         date_default_timezone_set('PRC');
 
@@ -18,8 +18,7 @@ class SendMailModel
 
         $interval = 60 * 1;
 //        do {
-            require "..../core/PHPMailer/class.phpmailer.php";
-            require "..../core/PHPMailer/class.smtp.php";
+
             $mail = new \PHPMailer();
             $mail->SMTPDebug = 3;
             $mail->isSMTP();
@@ -50,10 +49,10 @@ class SendMailModel
             sleep($interval);//休眠1minute
 //        } while (true);
         //清除缓冲区中的内容
-//        ob_clean();
+        ob_end_clean();
         //冲刷出（送出）输出缓冲区内容并关闭缓冲
-//        ob_end_flush();
-//        return 1;
+        ob_end_flush();
+
 
     }
 

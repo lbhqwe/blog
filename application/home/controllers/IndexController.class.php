@@ -30,6 +30,10 @@ class IndexController extends Controller{
 //        $this->assign("uname",MySession::getSession("uname"));
         $this->display();
     }
+    public function cart(){
+        $this->display();
+    }
+
 
     //添加留言信息控制器方法
     public function guestbook(){
@@ -45,5 +49,4 @@ class IndexController extends Controller{
         }
         echo json_encode($feedback,JSON_UNESCAPED_UNICODE);//返回json对象
     }
-
 }
