@@ -3,23 +3,6 @@
 <!--顶部导航栏开始-->
 <?php include_once __ADMIN_COMMON__."index_header.html";?>
 <!--顶部导航栏结束-->
-<div class=" admin-content">
-	
-		<div class="daohang">
-			<ul>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs"> 首页 </li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">帮助中心<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">奖金管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">产品管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				
-				
-			</ul>
-
-       
-
-	
-</div>
-
 
 <div class="am-popup am-popup-inner" id="my-popup">
 	
@@ -206,6 +189,7 @@
       <dl>
         <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus" > 手动添加会员</button>
       </dl>
+
       <!--这里打开的是新页面-->
       
       
@@ -341,29 +325,17 @@
     <a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a>
   </dl>
 </div>
-
-
-
-
 </div>
-
-</div>
-
-
-
-
-</div>
-
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/polyfill/rem.min.js"></script>
-<script src="assets/js/polyfill/respond.min.js"></script>
-<script src="assets/js/amazeui.legacy.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>polyfill/rem.min.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>polyfill/respond.min.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>amazeui.legacy.js"></script>
 <![endif]--> 
 
 <!--[if (gte IE 9)|!(IE)]><!--> 
-<script src="assets/js/amazeui.min.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>amazeui.min.js"></script>
 <!--<![endif]-->
 
 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>留言管理</title>
+    <link href="<?php echo __ADMIN_CSS__;?>bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo __ADMIN_CSS__;?>datepicker3.css" rel="stylesheet">
+    <link href="<?php echo __ADMIN_CSS__;?>bootstrap-table.css" rel="stylesheet">
+    <link href="<?php echo __ADMIN_CSS__;?>styles.css" rel="stylesheet">
+</head>
+
+<body>
+<!--顶部导航代码开始-->
+<?php include_once __ADMIN_COMMON__."main_top.html"; ?>
+<!--顶部导航代码结束-->
+<!--边栏导航开始-->
+<?php include_once __ADMIN_COMMON__."main_aside.html"; ?>
+<!--边栏导航结束-->
+
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="index.php?g=admin&c=main&a=main"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">留言管理</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">留言管理</h1>
+        </div>
+    </div><!--/.row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">留言列表</div>
+                <div class="panel-body">
+                    <table id="table" data-show-refresh="true" data-show-toggle="true" data-show-columns="true"
+                           data-search="true"></table>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+</div><!--/.main-->
+
+<script src="<?php echo __ADMIN_JS__;?>jquery-1.11.1.min.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>bootstrap.min.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>chart.min.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>chart-data.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>easypiechart.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>easypiechart-data.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>bootstrap-datepicker.js"></script>
+<script src="<?php echo __ADMIN_JS__;?>bootstrap-table.js"></script>
+<script>
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+
+
+<script type="text/javascript">
+
+    $("#table").bootstrapTable({ // 对应table标签的id
+        url: "index.php?g=admin&c=gbmgr&a=list",
+        cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+        striped: true,  //表格显示条纹，默认为false
+        pagination: true, // 在表格底部显示分页组件，默认false
+        pageList: [10, 20], // 设置页面可以显示的数据条数
+        pageSize: 10, // 页面数据条数
+        pageNumber: 1, // 首页页码
+        sidePagination: 'server', // 设置为服务器端分页
+        queryParams: function (params) { // 请求服务器数据时发送的参数，可以在这里添加额外的查询参数，返回false则终止请求
+            return {
+                pageSize: params.limit, // 每页要显示的数据条数
+                pageIndex: (params.offset / params.limit) + 1,//页码
+                like: params.search //模糊查询的条件
+            }
+        },
+        columns: [
+            {
+                checkbox: true, // 显示一个勾选框
+                title: 'ID',
+                field: 'id', // 返回json数据中的name
+                align: 'center', // 居中显示
+
+            }, {
+                field: 'uname', // 返回json数据中的name
+                title: '姓名', // 表格表头显示文字
+                align: 'center', // 左右居中
+                valign: 'middle', // 上下居中
+                width: 120
+            }, {
+                field: 'uemail',
+                title: '邮箱',
+                align: 'center',
+                valign: 'middle',
+                width: 160
+            }, {
+                field: 'uphone',
+                title: '电话',
+                align: 'center',
+                valign: 'middle',
+                width: 160
+            }, {
+                field: 'umessage',
+                title: '留言',
+                align: 'left',
+                valign: 'middle'
+            }, {
+                title: "操作",
+                align: 'center',
+                valign: 'middle',
+                width: 120, // 定义列的宽度，单位为像素px
+                formatter: function (value, row, index) {
+                    return '<button class="btn btn-primary btn-sm" onclick="del(\'' + row.id + '\')">删除</button>';
+                }
+            }
+        ],
+        onLoadSuccess: function () {  //加载成功时执行
+
+        },
+        onLoadError: function () {  //加载失败时执行
+            console.info("加载数据失败");
+        }
+    })
+
+    function del(id) {
+        var result = confirm("确认要删除该条数据吗？");
+        if (result) {
+            window.location.href = "index.php?g=admin&c=gbmgr&a=del&id=" + id;
+        }else {
+            window.location.href = "index.php?g=admin&c=main&a=gbmgr";
+        }
+    }
+</script>
+</body>
+
+</html>
