@@ -13,25 +13,28 @@ class MainController extends AdminGroupController /**后台主页控制器*/
     {
         $this->display();
     }
+    /**打开添加商品视图*/
     public function addgood()
     {
         $this->display();
     }
-    /**打开主页视图*/
+    /**打开留言视图*/
+    public function gbmgr()
+    {
+        $this->display();
+    }
+    /**打开系统设置视图*/
     public function setting()
     {
         $this->display();
     }
 
-    /**预约管理*/
+    /**会员管理*/
     public function VIP()
     {
         $this->display();
     }
-
-
-
-    /**用户管理*/
+    /**商品管理*/
     public function goodlist()
     {
         $this->display();
@@ -43,7 +46,7 @@ class MainController extends AdminGroupController /**后台主页控制器*/
         $res = $fileUpLoad->upload('photo');
         if ($res) {
             $filename = $fileUpLoad->getFileName();
-            $args = [$_POST['gname'], $filename, $_POST['gprice'], $_POST['gcount'],];
+            $args = [$_POST['gname'], $filename, $_POST['gprice'], $_POST['gcount'],$_POST['gmessage']];
             //持久化用户留言数据
             $gbm = new AddGoodModel();
             $gbm->add($args);
