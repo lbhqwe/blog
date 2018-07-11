@@ -11,7 +11,7 @@ class GuestBookModel extends Model
 {
     //添加留言的功能
     public function add($args){
-        $sql="INSERT INTO guestbook VALUES(DEFAULT,?,?,?,?)";
+        $sql="INSERT INTO guestbook VALUES(DEFAULT,?,?,?)";
        // $args=null;//不需要参数 项目中统一使用null值
         return $this->execute($sql,$args);
     }

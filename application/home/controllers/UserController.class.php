@@ -43,7 +43,7 @@ class UserController extends HomeGroupController
         $feedback = ["errno" => 500, "mess" => "用户名不存在或者密码错误！"];
         $uname = isset($_POST['uname']) ? $_POST['uname'] : null;
         $upwd = isset($_POST['upwd']) ? $_POST['upwd'] : null;
-        $remember = isset($_POST['remember']) ? true : null; //null 或者on
+        $remember = isset($_POST['remember']) ? true : false; //null 或者on
         if ($uname != null && $upwd != null) {
             $args = [$uname, md5($upwd)];
             $um = new UserModel();
@@ -63,4 +63,5 @@ class UserController extends HomeGroupController
         }
         echo JSON_encode($feedback,JSON_UNESCAPED_UNICODE);
     }
+
 }

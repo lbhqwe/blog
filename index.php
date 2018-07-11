@@ -4,7 +4,8 @@
 require "configs/config.php";
 require "configs/constants.php";
 require "core/MyLoad.class.php";
-
+require "core/PHPMailer/class.phpmailer.php";
+require "core/PHPMailer/class.smtp.php";
 \core\MyLoad::registerAutoLoad();
 //3.启动核心运行类
 \core\Application::run();

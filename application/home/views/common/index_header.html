@@ -1,8 +1,12 @@
 <div class="header">
     <div class="w3ls-header"><!--header-one-->
         <div class="w3ls-header-left">
-                <p><a href="index.php?g=home&c=login&a=login">Login </a>&nbsp;&nbsp;
-                <a href="index.php?g=home&c=login&a=signup">Sign Up</a></p>
+            <p>
+                <?php echo $_SESSION['uname'] ?>
+                <a href="index.php?g=home&c=login&a=login">Login </a>&nbsp;&nbsp;
+                <a href="index.php?g=home&c=login&a=signup">Sign Up</a>&nbsp;&nbsp;
+                <a href="index.php?g=home&c=login&a=logout">Logout</a>
+            </p>
         </div>
         <div class="w3ls-header-right">
             <ul>
@@ -16,13 +20,13 @@
                     </ul>
                 </li>
                 <li class="dropdown head-dpdn">
-                    <a href="contact.html" class="dropdown-toggle"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
+                    <a href="index.php?g=home&c=index&a=contact" class="dropdown-toggle"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
                 </li>
                 <li class="dropdown head-dpdn">
-                    <a href="card.html" class="dropdown-toggle"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit Card</a>
+                    <a href="card.html" class="dropdown-toggle"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Contact Us</a>
                 </li>
                 <li class="dropdown head-dpdn">
-                    <a href="help.html" class="dropdown-toggle"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
+                    <a href="help.html" class="dropdown-toggle"><i class="fa fa-question-circle" aria-hidden="true"></i> About Us</a>
                 </li>
             </ul>
         </div>
@@ -31,7 +35,7 @@
     <div class="header-two"><!-- header-two -->
         <div class="container">
             <div class="header-logo">
-                <h1><a href="index.html"><span>S</span>mart <i>Bazaar</i></a></h1>
+                <h1><a href="index.php"><span>S</span>mart <i>Bazaar</i></a></h1>
                 <h6>Your stores. Your place.</h6>
             </div>
             <div class="header-search">
@@ -44,13 +48,12 @@
             </div>
             <div class="header-cart">
                 <div class="my-account">
-                    <a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
+                    <a href="index.php?g=home&c=index&a=contact"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
                 </div>
                 <div class="cart">
                     <form action="#" method="post" class="last">
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="display" value="1" />
-                        <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+
+                        <button class="w3view-cart" type="submit" name="submit" value="submit"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
                     </form>
                 </div>
                 <div class="clearfix"> </div>
@@ -186,150 +189,150 @@
                                 <a href="#">Fashion Store</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products1.html">All Fashion Stores</a></li>
+                                    <li class="see-all"><a href="#">All Fashion Stores</a></li>
                                     <li class="has-children">
                                         <a href="#">GIRLS' CLOTHING</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Fashion Stores</a></li>
-                                            <li><a href="products1.html">Ethnic wear </a></li>
-                                            <li><a href="products1.html">Maternity wear</a></li>
-                                            <li><a href="products1.html">inner & nightwear </a></li>
-                                            <li><a href="products1.html">casual wear </a></li>
-                                            <li><a href="products1.html">formal wear</a></li>
-                                            <li><a href="products1.html">Sports wear</a></li>
+                                            <li><a href="#">Ethnic wear </a></li>
+                                            <li><a href="#">Maternity wear</a></li>
+                                            <li><a href="#">inner & nightwear </a></li>
+                                            <li><a href="#">casual wear </a></li>
+                                            <li><a href="#">formal wear</a></li>
+                                            <li><a href="#">Sports wear</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">BOYS' CLOTHING</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Fashion Stores</a></li>
-                                            <li><a href="products1.html">Jeans</a></li>
-                                            <li><a href="products1.html">Casual wear</a></li>
-                                            <li><a href="products1.html">Shorts</a></li>
-                                            <li><a href="products1.html">T-Shirts & Polos</a></li>
-                                            <li><a href="products1.html">Trousers & Chinos</a></li>
+                                            <li><a href="#">Jeans</a></li>
+                                            <li><a href="#">Casual wear</a></li>
+                                            <li><a href="#">Shorts</a></li>
+                                            <li><a href="#">T-Shirts & Polos</a></li>
+                                            <li><a href="#">Trousers & Chinos</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">JACKETS</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Fashion Stores</a></li>
-                                            <li><a href="products1.html">Blazers</a></li>
-                                            <li><a href="products1.html">Bomber jackets</a></li>
-                                            <li><a href="products1.html">Denim Jackets</a></li>
-                                            <li><a href="products1.html">Duffle Coats</a></li>
-                                            <li><a href="products1.html">Leather Jackets</a></li>
-                                            <li><a href="products1.html">Parkas</a></li>
+                                            <li><a href="#">Blazers</a></li>
+                                            <li><a href="#">Bomber jackets</a></li>
+                                            <li><a href="#">Denim Jackets</a></li>
+                                            <li><a href="#">Duffle Coats</a></li>
+                                            <li><a href="#">Leather Jackets</a></li>
+                                            <li><a href="#">Parkas</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">ACCESSORIES </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Fashion Stores</a></li>
-                                            <li><a href="products1.html">Watches </a></li>
-                                            <li><a href="products1.html">Eyewear </a></li>
-                                            <li><a href="products1.html">Jewellery </a></li>
+                                            <li><a href="#">Watches </a></li>
+                                            <li><a href="#">Eyewear </a></li>
+                                            <li><a href="#">Jewellery </a></li>
                                             <li class="has-children">
                                                 <a href="#">Footwear </a>
                                                 <ul class="is-hidden">
                                                     <li class="go-back"><a href="#"> </a></li>
-                                                    <li><a href="products1.html">Ethnic</a></li>
-                                                    <li><a href="products1.html">Casual wear</a></li>
-                                                    <li><a href="products1.html">Sports Shoes</a></li>
-                                                    <li><a href="products1.html">Boots</a></li>
+                                                    <li><a href="#">Ethnic</a></li>
+                                                    <li><a href="#">Casual wear</a></li>
+                                                    <li><a href="#">Sports Shoes</a></li>
+                                                    <li><a href="#">Boots</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="products1.html">Stoles & Scarves</a></li>
-                                            <li><a href="products1.html">Handbags</a></li>
+                                            <li><a href="#">Stoles & Scarves</a></li>
+                                            <li><a href="#">Handbags</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">BEAUTY</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Fashion Stores</a></li>
-                                            <li><a href="products1.html">Perfumes & Deos</a></li>
-                                            <li><a href="products1.html">Lipsticks & Nail Polish</a></li>
-                                            <li><a href="products1.html">Beauty Gift Hampers</a></li>
-                                            <li><a href="products1.html">Personal Grooming</a></li>
-                                            <li><a href="products1.html">Travel bags</a></li>
+                                            <li><a href="#">Perfumes & Deos</a></li>
+                                            <li><a href="#">Lipsticks & Nail Polish</a></li>
+                                            <li><a href="#">Beauty Gift Hampers</a></li>
+                                            <li><a href="#">Personal Grooming</a></li>
+                                            <li><a href="#">Travel bags</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="products1.html">PERSONAL CARE</a>
+                                        <a href="#">PERSONAL CARE</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Fashion Stores</a></li>
-                                            <li><a href="products1.html">Face Care</a></li>
-                                            <li><a href="products1.html">Nail Care</a></li>
-                                            <li><a href="products1.html">Hair Care</a></li>
-                                            <li><a href="products1.html">Body Care</a></li>
-                                            <li><a href="products1.html">Bath & Spa</a></li>
+                                            <li><a href="#">Face Care</a></li>
+                                            <li><a href="#">Nail Care</a></li>
+                                            <li><a href="#">Hair Care</a></li>
+                                            <li><a href="#">Body Care</a></li>
+                                            <li><a href="#">Bath & Spa</a></li>
                                         </ul>
                                     </li>
                                 </ul> <!-- .cd-secondary-dropdown -->
                             </li> <!-- .has-children -->
                             <li class="has-children">
-                                <a href="products2.html">Kids Fashion & Toys</a>
+                                <a href="#">Kids Fashion & Toys</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products2.html">All Kids Fashions</a></li>
+                                    <li class="see-all"><a href="#">All Kids Fashions</a></li>
                                     <li class="has-children">
-                                        <a href="products2.html">KIDS CLOTHING</a>
+                                        <a href="#">KIDS CLOTHING</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Kids Fashions</a></li>
-                                            <li><a href="products2.html">Ethnic wear </a></li>
-                                            <li><a href="products2.html">inner & Sleepwear </a></li>
-                                            <li><a href="products2.html">Dresses & Frocks </a></li>
-                                            <li><a href="products2.html">Winter wear</a></li>
-                                            <li><a href="products2.html">Diaper & Accessories</a></li>
+                                            <li><a href="#">Ethnic wear </a></li>
+                                            <li><a href="#">inner & Sleepwear </a></li>
+                                            <li><a href="#">Dresses & Frocks </a></li>
+                                            <li><a href="#">Winter wear</a></li>
+                                            <li><a href="#">Diaper & Accessories</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children"><a href="#">KIDS FASHION</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Kids Fashions</a></li>
-                                            <li><a href="products2.html">Footwear</a></li>
-                                            <li><a href="products2.html">Sunglasses </a></li>
-                                            <li><a href="products2.html">School & Stationery</a></li>
-                                            <li><a href="products2.html">Jewellery</a></li>
-                                            <li><a href="products2.html">Hair bands & Clips</a></li>
+                                            <li><a href="#">Footwear</a></li>
+                                            <li><a href="#">Sunglasses </a></li>
+                                            <li><a href="#">School & Stationery</a></li>
+                                            <li><a href="#">Jewellery</a></li>
+                                            <li><a href="#">Hair bands & Clips</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children"><a href="#">Baby Care</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Kids Fashions</a></li>
-                                            <li><a href="products2.html">Lotions, Oil & Powder </a></li>
-                                            <li><a href="products2.html">Soaps, Shampoo </a></li>
-                                            <li><a href="products2.html">Bath Towels</a></li>
+                                            <li><a href="#">Lotions, Oil & Powder </a></li>
+                                            <li><a href="#">Soaps, Shampoo </a></li>
+                                            <li><a href="#">Bath Towels</a></li>
                                             <li class="has-children">
                                                 <a href="#">Feeding</a>
                                                 <ul class="is-hidden">
                                                     <li class="go-back"><a href="#"> </a></li>
-                                                    <li><a href="products2.html">Baby Food </a></li>
-                                                    <li><a href="products2.html">Bottle Feeding </a></li>
-                                                    <li><a href="products2.html">Breast Feeding</a></li>
+                                                    <li><a href="#">Baby Food </a></li>
+                                                    <li><a href="#">Bottle Feeding </a></li>
+                                                    <li><a href="#">Breast Feeding</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="products2.html">Toddlers' Rooms</a></li>
+                                            <li><a href="#">Toddlers' Rooms</a></li>
                                         </ul><!-- .cd-secondary-dropdown -->
                                     </li> <!-- .has-children -->
                                     <li class="has-children"><a href="#">TOYS & GAMES </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Kids Fashions</a></li>
-                                            <li><a href="products2.html">Art & Crafts</a></li>
-                                            <li><a href="products2.html">Educational Toys </a></li>
-                                            <li><a href="products2.html">Baby Toys</a></li>
-                                            <li><a href="products2.html">Outdoor Play </a></li>
-                                            <li><a href="products2.html">Musical Instruments</a></li>
+                                            <li><a href="#">Art & Crafts</a></li>
+                                            <li><a href="#">Educational Toys </a></li>
+                                            <li><a href="#">Baby Toys</a></li>
+                                            <li><a href="#">Outdoor Play </a></li>
+                                            <li><a href="#">Musical Instruments</a></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Kids Fashions</a></li>
-                                            <li><a href="products2.html">Toy Tips & Trends</a></li>
-                                            <li><a href="products2.html">Preschool Toys</a></li>
-                                            <li><a href="products2.html">Musical Instruments</a></li>
-                                            <li><a href="products2.html">Bikes & Ride-Ons</a></li>
-                                            <li><a href="products2.html">Video Games</a></li>
-                                            <li><a href="products2.html">PC & Digital Gaming</a></li>
+                                            <li><a href="#">Toy Tips & Trends</a></li>
+                                            <li><a href="#">Preschool Toys</a></li>
+                                            <li><a href="#">Musical Instruments</a></li>
+                                            <li><a href="#">Bikes & Ride-Ons</a></li>
+                                            <li><a href="#">Video Games</a></li>
+                                            <li><a href="#">PC & Digital Gaming</a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
@@ -338,64 +341,64 @@
                                 <a href="#">Home, Furniture & Patio</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products3.html">All Products</a></li>
+                                    <li class="see-all"><a href="#">All Products</a></li>
                                     <li class="has-children">
                                         <a href="#">Kitchen Uses</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products3.html">Dinner Sets </a></li>
-                                            <li><a href="products3.html">Cookware & Bakeware </a></li>
-                                            <li><a href="products3.html">Containers & Jars </a></li>
-                                            <li><a href="products3.html">Kitchen Tools </a></li>
-                                            <li><a href="products3.html">Food Storage</a></li>
-                                            <li><a href="products3.html">Casseroles</a></li>
+                                            <li><a href="#">Dinner Sets </a></li>
+                                            <li><a href="#">Cookware & Bakeware </a></li>
+                                            <li><a href="#">Containers & Jars </a></li>
+                                            <li><a href="#">Kitchen Tools </a></li>
+                                            <li><a href="#">Food Storage</a></li>
+                                            <li><a href="#">Casseroles</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Furniture </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products3.html">Bedroom </a></li>
-                                            <li><a href="products3.html">Dining Room </a></li>
-                                            <li><a href="products3.html">Kids' Furniture </a></li>
-                                            <li><a href="products3.html">Living Room</a></li>
-                                            <li><a href="products3.html">Office</a></li>
-                                            <li><a href="products3.html">Mattresses</a></li>
+                                            <li><a href="#">Bedroom </a></li>
+                                            <li><a href="#">Dining Room </a></li>
+                                            <li><a href="#">Kids' Furniture </a></li>
+                                            <li><a href="#">Living Room</a></li>
+                                            <li><a href="#">Office</a></li>
+                                            <li><a href="#">Mattresses</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Home Decor </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products3.html">Lighting</a></li>
-                                            <li><a href="products3.html">Painting</a></li>
-                                            <li><a href="products3.html">Curtains & Blinds</a></li>
-                                            <li><a href="products3.html">Patio Furniture</a></li>
-                                            <li><a href="products3.html">Wardrobes & Cabinets</a></li>
-                                            <li><a href="products3.html">Mattresses</a></li>
+                                            <li><a href="#">Lighting</a></li>
+                                            <li><a href="#">Painting</a></li>
+                                            <li><a href="#">Curtains & Blinds</a></li>
+                                            <li><a href="#">Patio Furniture</a></li>
+                                            <li><a href="#">Wardrobes & Cabinets</a></li>
+                                            <li><a href="#">Mattresses</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Gardening & Lawn </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"> </a></li>
-                                            <li><a href="products3.html">Gardening </a></li>
-                                            <li><a href="products3.html">Landscaping </a></li>
-                                            <li><a href="products3.html">Sheds</a></li>
-                                            <li><a href="products3.html">Outdoor Storage  </a></li>
-                                            <li><a href="products3.html">Garden & Ideas </a></li>
-                                            <li><a href="products3.html">Patio Tips</a></li>
+                                            <li><a href="#">Gardening </a></li>
+                                            <li><a href="#">Landscaping </a></li>
+                                            <li><a href="#">Sheds</a></li>
+                                            <li><a href="#">Outdoor Storage  </a></li>
+                                            <li><a href="#">Garden & Ideas </a></li>
+                                            <li><a href="#">Patio Tips</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Garage Storage</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products3.html">Baskets & Bins </a></li>
-                                            <li><a href="products3.html">Garage Door Openers</a></li>
-                                            <li><a href="products3.html">Free Standing Shelves </a></li>
-                                            <li><a href="products3.html">Floor cleaning</a></li>
-                                            <li><a href="products3.html">Tool Kits</a></li>
+                                            <li><a href="#">Baskets & Bins </a></li>
+                                            <li><a href="#">Garage Door Openers</a></li>
+                                            <li><a href="#">Free Standing Shelves </a></li>
+                                            <li><a href="#">Floor cleaning</a></li>
+                                            <li><a href="#">Tool Kits</a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
@@ -404,71 +407,71 @@
                                 <a href="#">Sports, Fitness & Outdoor</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products4.html">All Products</a></li>
+                                    <li class="see-all"><a href="#">All Products</a></li>
                                     <li class="has-children">
                                         <a href="#">Single Sports </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products4.html">Bikes </a></li>
-                                            <li><a href="products4.html">Fishing  </a></li>
-                                            <li><a href="products4.html">Cycling </a></li>
-                                            <li><a href="products4.html">Musical Instruments</a></li>
-                                            <li><a href="products4.html">Archery </a></li>
+                                            <li><a href="#">Bikes </a></li>
+                                            <li><a href="#">Fishing  </a></li>
+                                            <li><a href="#">Cycling </a></li>
+                                            <li><a href="#">Musical Instruments</a></li>
+                                            <li><a href="#">Archery </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Team Sports</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products4.html">Cricket </a></li>
-                                            <li><a href="products4.html">Badminton </a></li>
-                                            <li><a href="products4.html">Swimming Gear </a></li>
-                                            <li><a href="products4.html">Sports Apparel </a></li>
-                                            <li><a href="products4.html">Indoor games</a></li>
+                                            <li><a href="#">Cricket </a></li>
+                                            <li><a href="#">Badminton </a></li>
+                                            <li><a href="#">Swimming Gear </a></li>
+                                            <li><a href="#">Sports Apparel </a></li>
+                                            <li><a href="#">Indoor games</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Fitness </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products4.html">Fitness Accessories </a></li>
-                                            <li><a href="products4.html">Exercise Machines </a></li>
-                                            <li><a href="products4.html">Ellipticals </a></li>
-                                            <li><a href="products4.html">Home Gyms</a></li>
-                                            <li><a href="products4.html">Exercise Bikes</a></li>
+                                            <li><a href="#">Fitness Accessories </a></li>
+                                            <li><a href="#">Exercise Machines </a></li>
+                                            <li><a href="#">Ellipticals </a></li>
+                                            <li><a href="#">Home Gyms</a></li>
+                                            <li><a href="#">Exercise Bikes</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Camping </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products4.html"> Airbeds</a></li>
-                                            <li><a href="products4.html">Tents </a></li>
-                                            <li><a href="products4.html">Gazebo's & Shelters</a></li>
-                                            <li><a href="products4.html">Coolers </a></li>
-                                            <li><a href="products4.html">Canopies</a></li>
-                                            <li><a href="products4.html">Sleeping Bags</a></li>
+                                            <li><a href="#"> Airbeds</a></li>
+                                            <li><a href="#">Tents </a></li>
+                                            <li><a href="#">Gazebo's & Shelters</a></li>
+                                            <li><a href="#">Coolers </a></li>
+                                            <li><a href="#">Canopies</a></li>
+                                            <li><a href="#">Sleeping Bags</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Camping Tools</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products4.html">Shooting </a></li>
-                                            <li><a href="products4.html">Knives & Tools </a></li>
-                                            <li><a href="products4.html">Optics & Binoculars </a></li>
-                                            <li><a href="products4.html">Lights & Lanterns </a></li>
-                                            <li><a href="products4.html">Hunting Clothing </a></li>
+                                            <li><a href="#">Shooting </a></li>
+                                            <li><a href="#">Knives & Tools </a></li>
+                                            <li><a href="#">Optics & Binoculars </a></li>
+                                            <li><a href="#">Lights & Lanterns </a></li>
+                                            <li><a href="#">Hunting Clothing </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Other</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products4.html">Riding Gears & More </a></li>
-                                            <li><a href="products4.html">Body Massagers </a></li>
-                                            <li><a href="products4.html">Health Monitors </a></li>
-                                            <li><a href="products4.html">Health Drinks </a></li>
+                                            <li><a href="#">Riding Gears & More </a></li>
+                                            <li><a href="#">Body Massagers </a></li>
+                                            <li><a href="#">Health Monitors </a></li>
+                                            <li><a href="#">Health Drinks </a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
@@ -477,69 +480,69 @@
                                 <a href="#">Grocery store</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products5.html">All Products</a></li>
+                                    <li class="see-all"><a href="#">All Products</a></li>
                                     <li class="has-children">
                                         <a href="#">Veggies & Fruits </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products5.html">Vegetables </a></li>
-                                            <li><a href="products5.html">Fruits </a></li>
-                                            <li><a href="products5.html">Dry Fruits</a></li>
-                                            <li><a href="products5.html">Snacks & Cookies </a></li>
-                                            <li><a href="products5.html">Breakfast & Cereal</a></li>
+                                            <li><a href="#">Vegetables </a></li>
+                                            <li><a href="#">Fruits </a></li>
+                                            <li><a href="#">Dry Fruits</a></li>
+                                            <li><a href="#">Snacks & Cookies </a></li>
+                                            <li><a href="#">Breakfast & Cereal</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Packet Food</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products5.html">Beverages </a></li>
-                                            <li><a href="products5.html">Baking </a></li>
-                                            <li><a href="products5.html">Emergency Food </a></li>
-                                            <li><a href="products5.html">Candy & Gum </a></li>
-                                            <li><a href="products5.html">Meals & Pasta </a></li>
+                                            <li><a href="#">Beverages </a></li>
+                                            <li><a href="#">Baking </a></li>
+                                            <li><a href="#">Emergency Food </a></li>
+                                            <li><a href="#">Candy & Gum </a></li>
+                                            <li><a href="#">Meals & Pasta </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Shop All Pets </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products5.html">Dogs </a></li>
-                                            <li><a href="products5.html">Fish </a></li>
-                                            <li><a href="products5.html">Cats</a></li>
-                                            <li><a href="products5.html">Birds </a></li>
-                                            <li><a href="products5.html">Pet Food </a></li>
+                                            <li><a href="#">Dogs </a></li>
+                                            <li><a href="#">Fish </a></li>
+                                            <li><a href="#">Cats</a></li>
+                                            <li><a href="#">Birds </a></li>
+                                            <li><a href="#">Pet Food </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Household Essentials </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products5.html">Laundry Room </a></li>
-                                            <li><a href="products5.html">Paper & Plastic</a></li>
-                                            <li><a href="products5.html">Pest Control </a></li>
-                                            <li><a href="products5.html">Batteries </a></li>
+                                            <li><a href="#">Laundry Room </a></li>
+                                            <li><a href="#">Paper & Plastic</a></li>
+                                            <li><a href="#">Pest Control </a></li>
+                                            <li><a href="#">Batteries </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Food Shops </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products5.html">Fresh Food</a></li>
-                                            <li><a href="products5.html">Food Gifts </a></li>
-                                            <li><a href="products5.html">Frozen Food </a></li>
-                                            <li><a href="products5.html">Organic </a></li>
-                                            <li><a href="products5.html">Gluten Free </a></li>
+                                            <li><a href="#">Fresh Food</a></li>
+                                            <li><a href="#">Food Gifts </a></li>
+                                            <li><a href="#">Frozen Food </a></li>
+                                            <li><a href="#">Organic </a></li>
+                                            <li><a href="#">Gluten Free </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Tips </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products5.html">Pets Growth</a></li>
-                                            <li><a href="products5.html">Recipes </a></li>
-                                            <li><a href="products5.html">Snacks</a></li>
-                                            <li><a href="products5.html">Nutrition</a></li>
+                                            <li><a href="#">Pets Growth</a></li>
+                                            <li><a href="#">Recipes </a></li>
+                                            <li><a href="#">Snacks</a></li>
+                                            <li><a href="#">Nutrition</a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
@@ -548,71 +551,71 @@
                                 <a href="#">Photo, Gifts & Office Supplies</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products6.html">All Products</a></li>
+                                    <li class="see-all"><a href="#">All Products</a></li>
                                     <li class="has-children">
                                         <a href="#">Trending Now </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products6.html">Best Priced</a></li>
-                                            <li><a href="products6.html">Chocolates </a></li>
-                                            <li><a href="products6.html">Gift Cards </a></li>
-                                            <li><a href="products6.html">Fashion & Accessories </a></li>
-                                            <li><a href="products6.html">Decorative Plants </a></li>
+                                            <li><a href="#">Best Priced</a></li>
+                                            <li><a href="#">Chocolates </a></li>
+                                            <li><a href="#">Gift Cards </a></li>
+                                            <li><a href="#">Fashion & Accessories </a></li>
+                                            <li><a href="#">Decorative Plants </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Photos </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products6.html">Shelf animation </a></li>
-                                            <li><a href="products6.html">3D-rendered </a></li>
-                                            <li><a href="products6.html">gift builder </a></li>
-                                            <li><a href="products6.html">Frames</a></li>
-                                            <li><a href="products6.html">Wall Decor</a></li>
+                                            <li><a href="#">Shelf animation </a></li>
+                                            <li><a href="#">3D-rendered </a></li>
+                                            <li><a href="#">gift builder </a></li>
+                                            <li><a href="#">Frames</a></li>
+                                            <li><a href="#">Wall Decor</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Gifts </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products6.html">Personalized Gifts </a></li>
-                                            <li><a href="products6.html">Flowers </a></li>
-                                            <li><a href="products6.html">Cards & Toys</a></li>
-                                            <li><a href="products6.html">Show pieces </a></li>
-                                            <li><a href="products6.html">Photo Books</a></li>
+                                            <li><a href="#">Personalized Gifts </a></li>
+                                            <li><a href="#">Flowers </a></li>
+                                            <li><a href="#">Cards & Toys</a></li>
+                                            <li><a href="#">Show pieces </a></li>
+                                            <li><a href="#">Photo Books</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Favourite Brands </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products6.html">Archies </a></li>
-                                            <li><a href="products6.html">Jewel Fuel </a></li>
-                                            <li><a href="products6.html">Ferns N Petals </a></li>
-                                            <li><a href="products6.html">Happily Unmarried</a></li>
-                                            <li><a href="products6.html">Chumbak</a></li>
+                                            <li><a href="#">Archies </a></li>
+                                            <li><a href="#">Jewel Fuel </a></li>
+                                            <li><a href="#">Ferns N Petals </a></li>
+                                            <li><a href="#">Happily Unmarried</a></li>
+                                            <li><a href="#">Chumbak</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Office</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products6.html">Calendars</a></li>
-                                            <li><a href="products6.html">Mousepads</a></li>
-                                            <li><a href="products6.html">Phone Cases</a></li>
-                                            <li><a href="products6.html">Tablet & Laptop Cases</a></li>
-                                            <li><a href="products6.html">Mounted Photos</a></li>
+                                            <li><a href="#">Calendars</a></li>
+                                            <li><a href="#">Mousepads</a></li>
+                                            <li><a href="#">Phone Cases</a></li>
+                                            <li><a href="#">Tablet & Laptop Cases</a></li>
+                                            <li><a href="#">Mounted Photos</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Combos </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products6.html">Chocolates </a></li>
-                                            <li><a href="products6.html">Dry Fruits</a></li>
-                                            <li><a href="products6.html">Sweets</a></li>
-                                            <li><a href="products6.html">Snacks</a></li>
-                                            <li><a href="products6.html">Cakes</a></li>
+                                            <li><a href="#">Chocolates </a></li>
+                                            <li><a href="#">Dry Fruits</a></li>
+                                            <li><a href="#">Sweets</a></li>
+                                            <li><a href="#">Snacks</a></li>
+                                            <li><a href="#">Cakes</a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
@@ -621,59 +624,59 @@
                                 <a href="#">Health, Beauty & Pharmacy</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products7.html">All Products</a></li>
+                                    <li class="see-all"><a href="#">All Products</a></li>
                                     <li class="has-children">
                                         <a href="#">Health</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products7.html">Home Health Care </a></li>
-                                            <li><a href="products7.html">Sports Nutrition </a></li>
-                                            <li><a href="products7.html">Vision </a></li>
-                                            <li><a href="products7.html">Vitamins </a></li>
-                                            <li><a href="products7.html">Diet & Nutrition </a></li>
+                                            <li><a href="#">Home Health Care </a></li>
+                                            <li><a href="#">Sports Nutrition </a></li>
+                                            <li><a href="#">Vision </a></li>
+                                            <li><a href="#">Vitamins </a></li>
+                                            <li><a href="#">Diet & Nutrition </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Health Tips</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products7.html">Diet</a></li>
-                                            <li><a href="products7.html">Exercise Tips  </a></li>
-                                            <li><a href="products7.html">Vitamin Balance</a></li>
-                                            <li><a href="products7.html">Health Insurance</a></li>
-                                            <li><a href="products7.html">Funeral</a></li>
+                                            <li><a href="#">Diet</a></li>
+                                            <li><a href="#">Exercise Tips  </a></li>
+                                            <li><a href="#">Vitamin Balance</a></li>
+                                            <li><a href="#">Health Insurance</a></li>
+                                            <li><a href="#">Funeral</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Beauty </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products7.html">Massage & Spa </a></li>
-                                            <li><a href="products7.html">Face Wash</a></li>
-                                            <li><a href="products7.html">Facial Cleanser</a></li>
-                                            <li><a href="products7.html">Makeup </a></li>
-                                            <li><a href="products7.html">Beauty Tips</a></li>
+                                            <li><a href="#">Massage & Spa </a></li>
+                                            <li><a href="#">Face Wash</a></li>
+                                            <li><a href="#">Facial Cleanser</a></li>
+                                            <li><a href="#">Makeup </a></li>
+                                            <li><a href="#">Beauty Tips</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Pharmacy </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products7.html">Home Delivery </a></li>
-                                            <li><a href="products7.html">History & Reports </a></li>
-                                            <li><a href="products7.html">Transfer Prescriptions </a></li>
-                                            <li><a href="products7.html">Health CheckUp</a></li>
-                                            <li><a href="products7.html">Mobile App</a></li>
+                                            <li><a href="#">Home Delivery </a></li>
+                                            <li><a href="#">History & Reports </a></li>
+                                            <li><a href="#">Transfer Prescriptions </a></li>
+                                            <li><a href="#">Health CheckUp</a></li>
+                                            <li><a href="#">Mobile App</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Pharmacy Center </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products7.html">Diabetes Shop </a></li>
-                                            <li><a href="products7.html">Medicine Cabinet </a></li>
-                                            <li><a href="products7.html">Vitamin Selector</a></li>
-                                            <li><a href="products7.html">Pharmacy Help</a></li>
+                                            <li><a href="#">Diabetes Shop </a></li>
+                                            <li><a href="#">Medicine Cabinet </a></li>
+                                            <li><a href="#">Vitamin Selector</a></li>
+                                            <li><a href="#">Pharmacy Help</a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
@@ -682,71 +685,71 @@
                                 <a href="#">Automotive</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products8.html">All Products</a></li>
+                                    <li class="see-all"><a href="#">All Products</a></li>
                                     <li class="has-children">
                                         <a href="#">All Motors </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products8.html">Bikes </a></li>
-                                            <li><a href="products8.html">Yachts </a></li>
-                                            <li><a href="products8.html">Scooters </a></li>
-                                            <li><a href="products8.html">Autos</a></li>
-                                            <li><a href="products8.html">Bus</a></li>
+                                            <li><a href="#">Bikes </a></li>
+                                            <li><a href="#">Yachts </a></li>
+                                            <li><a href="#">Scooters </a></li>
+                                            <li><a href="#">Autos</a></li>
+                                            <li><a href="#">Bus</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Accessories </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products8.html">Vehicle Electronics</a></li>
-                                            <li><a href="products8.html">Stereos & Monitors</a></li>
-                                            <li><a href="products8.html">Bluetooth Devices</a></li>
-                                            <li><a href="products8.html">GPS Navigation</a></li>
-                                            <li><a href="products8.html">Speakers & Tweeters</a></li>
+                                            <li><a href="#">Vehicle Electronics</a></li>
+                                            <li><a href="#">Stereos & Monitors</a></li>
+                                            <li><a href="#">Bluetooth Devices</a></li>
+                                            <li><a href="#">GPS Navigation</a></li>
+                                            <li><a href="#">Speakers & Tweeters</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Safety & Security </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products8.html">Anti-Theft Devices </a></li>
-                                            <li><a href="products8.html">Helmets</a></li>
-                                            <li><a href="products8.html">Sensors</a></li>
-                                            <li><a href="products8.html">Auto Repair Tools </a></li>
-                                            <li><a href="products8.html">Antifreeze & Coolants </a></li>
+                                            <li><a href="#">Anti-Theft Devices </a></li>
+                                            <li><a href="#">Helmets</a></li>
+                                            <li><a href="#">Sensors</a></li>
+                                            <li><a href="#">Auto Repair Tools </a></li>
+                                            <li><a href="#">Antifreeze & Coolants </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Car Interiors</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products8.html">Stereos </a></li>
-                                            <li><a href="products8.html">Floor Mats </a></li>
-                                            <li><a href="products8.html">Seat Covers</a></li>
-                                            <li><a href="products8.html">Chargers </a></li>
-                                            <li><a href="products8.html">Audio Finder </a></li>
+                                            <li><a href="#">Stereos </a></li>
+                                            <li><a href="#">Floor Mats </a></li>
+                                            <li><a href="#">Seat Covers</a></li>
+                                            <li><a href="#">Chargers </a></li>
+                                            <li><a href="#">Audio Finder </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Exterior Accessories </a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products8.html">Wheel covers </a></li>
-                                            <li><a href="products8.html">Car Lighting </a></li>
-                                            <li><a href="products8.html">Polish & Waxes</a></li>
-                                            <li><a href="products8.html">Cargo Management</a></li>
-                                            <li><a href="products8.html">Car Decoration </a></li>
+                                            <li><a href="#">Wheel covers </a></li>
+                                            <li><a href="#">Car Lighting </a></li>
+                                            <li><a href="#">Polish & Waxes</a></li>
+                                            <li><a href="#">Cargo Management</a></li>
+                                            <li><a href="#">Car Decoration </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Car Care</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products8.html">Auto Tips & Advice </a></li>
-                                            <li><a href="products8.html">Car Washes & Cleaners </a></li>
-                                            <li><a href="products8.html">Car Wax & Polish</a></li>
-                                            <li><a href="products8.html">Cleaning Tools</a></li>
-                                            <li><a href="products8.html">Detailing Kits </a></li>
+                                            <li><a href="#">Auto Tips & Advice </a></li>
+                                            <li><a href="#">Car Washes & Cleaners </a></li>
+                                            <li><a href="#">Car Wax & Polish</a></li>
+                                            <li><a href="#">Cleaning Tools</a></li>
+                                            <li><a href="#">Detailing Kits </a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
@@ -755,7 +758,7 @@
                                 <a href="#">Books, Music & Movies</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="products9.html">All Products</a></li>
+                                    <li class="see-all"><a href="#">All Products</a></li>
                                     <li class="has-children">
                                         <a href="#">Books</a>
                                         <ul class="is-hidden">
@@ -763,70 +766,70 @@
                                             <li class="has-children"><a href="#">Exam books </a>
                                                 <ul class="is-hidden">
                                                     <li class="go-back"><a href="#"> </a></li>
-                                                    <li><a href="products9.html">CAT/MAT/XAT</a></li>
-                                                    <li><a href="products9.html">Civil Services</a></li>
-                                                    <li><a href="products9.html">AFCAT</a></li>
-                                                    <li><a href="products9.html">New Releases</a></li>
+                                                    <li><a href="#">CAT/MAT/XAT</a></li>
+                                                    <li><a href="#">Civil Services</a></li>
+                                                    <li><a href="#">AFCAT</a></li>
+                                                    <li><a href="#">New Releases</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="products9.html">Academic Text </a></li>
-                                            <li><a href="products9.html">Romance Books </a></li>
-                                            <li><a href="products9.html">Journals </a></li>
-                                            <li><a href="products9.html">Children's & Teen Books </a></li>
+                                            <li><a href="#">Academic Text </a></li>
+                                            <li><a href="#">Romance Books </a></li>
+                                            <li><a href="#">Journals </a></li>
+                                            <li><a href="#">Children's & Teen Books </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Music</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products9.html">New Releases </a></li>
-                                            <li><a href="products9.html">Country Music </a></li>
-                                            <li><a href="products9.html">Musical Instruments </a></li>
-                                            <li><a href="products9.html">Collections</a></li>
-                                            <li><a href="products9.html">Boxed Sets </a></li>
+                                            <li><a href="#">New Releases </a></li>
+                                            <li><a href="#">Country Music </a></li>
+                                            <li><a href="#">Musical Instruments </a></li>
+                                            <li><a href="#">Collections</a></li>
+                                            <li><a href="#">Boxed Sets </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Music Combo</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products9.html">Pop </a></li>
-                                            <li><a href="products9.html">Preorders </a></li>
-                                            <li><a href="products9.html">Album Songs</a></li>
-                                            <li><a href="products9.html">Top 50 CDs </a></li>
-                                            <li><a href="products9.html">Music DVDs </a></li>
+                                            <li><a href="#">Pop </a></li>
+                                            <li><a href="#">Preorders </a></li>
+                                            <li><a href="#">Album Songs</a></li>
+                                            <li><a href="#">Top 50 CDs </a></li>
+                                            <li><a href="#">Music DVDs </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Movies</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products9.html">New Releases </a></li>
-                                            <li><a href="products9.html">Children & Family </a></li>
-                                            <li><a href="products9.html">Action</a></li>
-                                            <li><a href="products9.html">Classic Movies </a></li>
-                                            <li><a href="products9.html">Bollywood Movies </a></li>
+                                            <li><a href="#">New Releases </a></li>
+                                            <li><a href="#">Children & Family </a></li>
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Classic Movies </a></li>
+                                            <li><a href="#">Bollywood Movies </a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">Movies Combo</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products9.html">Hollywood Movies </a></li>
-                                            <li><a href="products9.html">Digital Movies </a></li>
-                                            <li><a href="products9.html">Boxed Sets</a></li>
-                                            <li><a href="products9.html">Animated</a></li>
-                                            <li><a href="products9.html">Adventure</a></li>
+                                            <li><a href="#">Hollywood Movies </a></li>
+                                            <li><a href="#">Digital Movies </a></li>
+                                            <li><a href="#">Boxed Sets</a></li>
+                                            <li><a href="#">Animated</a></li>
+                                            <li><a href="#">Adventure</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">TV Shows</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#"></a></li>
-                                            <li><a href="products9.html">Serials</a></li>
-                                            <li><a href="products9.html">Best Programs</a></li>
-                                            <li><a href="products9.html">Celebrations</a></li>
-                                            <li><a href="products9.html">Top Shows</a></li>
+                                            <li><a href="#">Serials</a></li>
+                                            <li><a href="#">Best Programs</a></li>
+                                            <li><a href="#">Celebrations</a></li>
+                                            <li><a href="#">Top Shows</a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
