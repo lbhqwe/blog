@@ -11,7 +11,7 @@ namespace core\mybase;
 
 class Model
 {
-    private $dsn = "mysql:dbname=myhospital;host=localhost:3306";
+    private $dsn = "mysql:dbname=mymart;host=localhost:3306";
     private $username = "root";
     private $password = "888";
     private $option = array(\PDO::ATTR_PERSISTENT => true, \PDO::ATTR_ORACLE_NULLS => true,

@@ -27,6 +27,7 @@ define("__ADMIN_CSS__", SERVER_URL.__ADMIN__."css/");
 define("__ADMIN_IMAGES__", SERVER_URL.__ADMIN__."images/");
 define("__ADMIN_JS__", SERVER_URL.__ADMIN__."js/");
 define("__ADMIN_I__", SERVER_URL.__ADMIN__."i/");
+define("__ADMIN_ASSETS__", SERVER_URL.__ADMIN__."assets/");
 
 //定义前后台共代码文件的地址常量
 // application/admin/views/common/
